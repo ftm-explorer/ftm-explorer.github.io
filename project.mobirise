@@ -1,0 +1,150 @@
+{
+  "settings": {
+    "name": "ftm explorer",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.13",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/ftmscan.png",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://ftm-explorer.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nsitemap: https://ftm-explorer.github.io/sitemap.xml",
+    "mbrsiteDomain": "xiehigypnh",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.13"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "FTM Explorer | Fantom Explorer | Home",
+        "meta_descr": "FTMScan allows you to explore and search the Fantom blockchain for transactions, addresses, tokens, prices and other activities taking place on Fantom (FTM)",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <img src=\"@PROJECT_PATH@/assets/images/ftm-explorer.png\" alt=\"FTM Explorer\">\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_anchor": "image04-0",
+          "_isUserblock": true,
+          "_cid": "utZZdbSekm",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked=\"\">\n    <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline=\"\" title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked=\"\">\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked=\"\">\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked=\"\">\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#000000\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax=\"\">\n      <input type=\"color\" title=\"Color\" value=\"#000000\" selected=\"\">\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Exploring Fantom Explorer: Your Gateway to the Fantom Blockchain</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Introduction</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">In the dynamic world of blockchain technology, transparency and accessibility are paramount. As decentralized finance (DeFi) and smart contract platforms continue to gain traction, users need reliable tools to navigate these ecosystems. Enter Fantom Explorer, a powerful blockchain explorer tailored for the Fantom network. This blog will delve into what Fantom Explorer is, how it works, its key features, and its significance within the broader DeFi landscape.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What is Fantom?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Before diving into Fantom Explorer, it’s essential to understand the underlying platform it serves. Fantom is a high-performance, scalable, and secure smart contract platform designed to support decentralized applications (dApps) and digital assets. Built on a unique consensus mechanism called the Lachesis Protocol, Fantom offers low transaction fees and rapid confirmation times, making it an attractive choice for developers and users alike.<br><br><b>Key Features of Fantom</b><br><b>Scalability:</b> Fantom’s architecture allows for high throughput, accommodating thousands of transactions per second (TPS) without compromising speed or security.<br><b>Low Fees:</b> Transaction fees on the Fantom network are significantly lower than those on many other blockchain platforms, promoting user accessibility.<br><b>Interoperability:</b> Fantom is designed to be compatible with Ethereum, enabling developers to port their existing dApps and leverage the vast Ethereum ecosystem.<br><b>Decentralized Finance (DeFi):</b> The platform supports a wide range of DeFi applications, including lending, borrowing, and decentralized exchanges (DEXs), fostering a vibrant financial ecosystem.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What is Fantom Explorer?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Fantom Explorer is a blockchain explorer specifically designed for the Fantom network. It serves as a vital tool for users, developers, and investors, providing real-time insights into the blockchain’s activities. With Fantom Explorer, users can track transactions, view smart contracts, monitor token movements, and access a wealth of information about the Fantom ecosystem.<br><br><b>Importance of a Blockchain Explorer</b><br>Blockchain explorers are essential for several reasons:<br><br><b>Transparency: </b>They provide a transparent view of all transactions occurring on the blockchain, allowing users to verify and audit activities.<br><b>Tracking Transactions:</b> Users can track the status of their transactions, ensuring they are confirmed and settled.<br><b>Smart Contract Interaction: </b>Developers can interact with and verify the functionality of smart contracts deployed on the network.<br><b>Data Analytics:</b> Explorers offer valuable data analytics, including transaction volume, active addresses, and block statistics, aiding users in making informed decisions.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>How Fantom Explorer Works</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Fantom Explorer operates by connecting to the Fantom blockchain, pulling data in real-time, and presenting it in an easy-to-read format. Here’s a breakdown of its core functionalities:<br><br><b>1. Real-Time Data Retrieval</b><br>Fantom Explorer continuously retrieves data from the Fantom blockchain, ensuring that users have access to the most up-to-date information regarding transactions, blocks, and contracts.<br><br><b>2. User Interface</b><br>The user interface of Fantom Explorer is designed to be intuitive, allowing users to easily navigate through various sections. Key components include:<br><br><b>Dashboard:</b> A comprehensive overview of the blockchain’s status, including the latest blocks, transactions, and network statistics.<br><b>Transaction Search:</b> Users can input transaction hashes to find specific transactions and view their details.<br><b>Address Monitoring:</b> Users can track the activity of specific addresses, including incoming and outgoing transactions.<br><b>Token Explorer:</b> A dedicated section to explore the various tokens on the Fantom network, along with their details and transaction history.<br><br><b>3. Data Presentation</b><br>Fantom Explorer presents data in a user-friendly format, utilizing charts, graphs, and tables to visualize important metrics. This presentation makes it easier for users to grasp complex data and trends within the network.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features of Fantom Explorer</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Transaction Tracking</b><br>One of the primary functions of Fantom Explorer is transaction tracking. Users can easily search for transactions using their hashes. The transaction details include:<br><br><b>Sender and Receiver Addresses:</b> Identifying the parties involved in the transaction.<br><b>Transaction Fee:</b> The fee paid for processing the transaction.<br><b>Timestamp:</b> The exact time when the transaction was confirmed.<br><b>Status:</b> Whether the transaction is pending, confirmed, or failed.<br><br><b>2. Block Information</b><br>Fantom Explorer provides detailed information about the blocks on the Fantom blockchain. Users can view:<br><br><b>Block Height:</b> The current number of blocks in the chain.<br><b>Miner Information:</b> Details about the miner who processed the block.<br><b>Block Time:</b> The time taken to generate each block.<br><b>Transactions per Block:</b> Insights into the number of transactions included in a specific block.<br><br><b>3. Address Activity</b><br>Users can monitor the activity of specific addresses on the Fantom network. This feature allows users to:<br><br>View Transaction History: A complete record of all transactions associated with an address.<br>Check Token Balances: Information about the tokens held by the address.<br>Analyze Patterns: Identify trends in the address's activity, such as frequent transactions or large transfers.<br>4. Token Explorer<br>The Token Explorer feature allows users to discover and track various tokens within the Fantom ecosystem. Users can:<br><br>Search for Tokens: Find specific tokens by name or symbol.<br>View Token Details: Access information about the token’s contract, total supply, and holders.<br>Track Transactions: Monitor the transaction history of a specific token, including transfers and exchanges.<br>5. Network Statistics<br>Fantom Explorer provides valuable statistics about the Fantom network, including:<br><br>Total Transactions: The cumulative number of transactions processed on the network.<br>Active Addresses: The number of unique addresses participating in transactions over a specific period.<br>Transaction Volume: Insights into the total dollar value of transactions occurring on the network.<br>Block Times: Average time intervals between the generation of blocks.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Benefits of Using Fantom Explorer</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">1. Enhanced Transparency<br>Fantom Explorer enhances transparency by providing users with access to all transactions and activities on the Fantom blockchain. This transparency fosters trust and accountability within the ecosystem.<br><br>2. Informed Decision-Making<br>The wealth of data available through Fantom Explorer empowers users to make informed decisions regarding their investments and participation in the Fantom network. By analyzing transaction trends and network statistics, users can identify opportunities and risks.<br><br>3. User Empowerment<br>Fantom Explorer empowers users by giving them the tools to track their assets and monitor network activities. This level of control and visibility is crucial for participants in the DeFi space.<br><br>4. Developer Support<br>For developers, Fantom Explorer serves as a valuable resource for testing and verifying smart contracts. By providing easy access to transaction data and contract interactions, developers can ensure the functionality and security of their dApps.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Challenges and Limitations</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">While Fantom Explorer is a powerful tool, it is important to acknowledge some challenges and limitations:<br><br>1. Data Overload<br>The sheer volume of data available on the blockchain can be overwhelming for new users. While the explorer presents data in an organized manner, users may still find it challenging to extract meaningful insights without a basic understanding of blockchain concepts.<br><br>2. Security Concerns<br>As with any online platform, there are potential security concerns. Users should exercise caution when sharing their wallet addresses or personal information while using Fantom Explorer.<br><br>3. Network Congestion<br>During periods of high activity on the Fantom network, users may experience delays in transaction confirmations. While this is a general challenge for all blockchains, it can affect the accuracy of real-time data presented by the explorer.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Future of Fantom Explorer</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">1. Enhanced Features<br>As the Fantom ecosystem continues to grow, Fantom Explorer is likely to introduce new features to enhance user experience. Potential developments may include advanced analytics tools, customizable dashboards, and enhanced reporting capabilities.<br><br>2. Community Engagement<br>Fantom Explorer may also focus on increasing community engagement by incorporating user feedback into its development roadmap. This could involve hosting community events, workshops, or educational content to help users better understand the platform.<br><br>3. Integration with dApps<br>As more dApps are developed on the Fantom network, Fantom Explorer could integrate features that facilitate direct interactions with these applications. This integration would streamline user experiences and enhance the overall utility of the explorer.<br><br>4. Cross-Chain Functionality<br>Future iterations of Fantom Explorer may explore cross-chain functionalities, allowing users to monitor activities on other blockchains while interacting with the Fantom ecosystem. This would promote interoperability and broaden the scope of the explorer.<br><br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Conclusion</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Fantom Explorer is a vital tool for navigating the Fantom blockchain, providing users with the transparency, insights, and control they need to engage with the DeFi ecosystem effectively. Its user-friendly interface, robust features, and commitment to community engagement make it an indispensable resource for both novice and experienced users.<br><br>As the Fantom network continues to evolve, so too will Fantom Explorer, adapting to the needs of its users and the demands of the broader blockchain landscape. By empowering users with real-time data and facilitating informed decision-making, Fantom Explorer plays a crucial role in shaping the future of decentralized finance.<br><br>Whether you are a trader, developer, or simply an enthusiast, Fantom Explorer offers an accessible gateway to the exciting world of the Fantom blockchain. Its continuous development and user-centric approach ensure that it will remain a key player in the growing DeFi landscape for years to come.</p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons=\"\" mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_anchor": "article07-1",
+          "_isUserblock": true,
+          "_cid": "utZZduSpIT",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
